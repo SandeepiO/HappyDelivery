@@ -1,0 +1,855 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06F89F5022C3889C001618C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F4F22C3889C001618C3 /* AppDelegate.swift */; };
+		06F89F5222C3889C001618C3 /* DeliveryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F5122C3889C001618C3 /* DeliveryListViewController.swift */; };
+		06F89F5822C3889C001618C3 /* HappyDelivery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F5622C3889C001618C3 /* HappyDelivery.xcdatamodeld */; };
+		06F89F5A22C3889E001618C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F89F5922C3889E001618C3 /* Assets.xcassets */; };
+		06F89F5D22C3889E001618C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F89F5B22C3889E001618C3 /* LaunchScreen.storyboard */; };
+		06F89F8122C38E94001618C3 /* DeliveryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F8022C38E94001618C3 /* DeliveryListTableViewCell.swift */; };
+		06F89F8722C48975001618C3 /* DeliveryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F8622C48975001618C3 /* DeliveryListModel.swift */; };
+		06F89F8B22C498D7001618C3 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F8A22C498D7001618C3 /* WebServices.swift */; };
+		06F89F8E22C499C5001618C3 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F8D22C499C5001618C3 /* AppConstant.swift */; };
+		06F89F9122C4A08A001618C3 /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F9022C4A08A001618C3 /* AppExtension.swift */; };
+		06F89F9622C4A794001618C3 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F9522C4A794001618C3 /* Indicator.swift */; };
+		06F89F9A22C4B258001618C3 /* DeliveryListRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F9922C4B258001618C3 /* DeliveryListRequestModel.swift */; };
+		06F89F9C22C4BFDD001618C3 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F9B22C4BFDD001618C3 /* CoreDataHelper.swift */; };
+		06F89FA022C5C2FD001618C3 /* DeliveryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F9F22C5C2FD001618C3 /* DeliveryDetailViewController.swift */; };
+		06F89FA222C5DA45001618C3 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89FA122C5DA45001618C3 /* Marker.swift */; };
+		06F89FB022CA0074001618C3 /* WebServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89FAF22CA0074001618C3 /* WebServicesTests.swift */; };
+		06F89FB422CA067B001618C3 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89FB322CA067B001618C3 /* CoreDataTests.swift */; };
+		06F89FB722CA1364001618C3 /* DeliveryListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89FB622CA1364001618C3 /* DeliveryListViewControllerTests.swift */; };
+		06F89FB922CA1435001618C3 /* DeliveryDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89FB822CA1435001618C3 /* DeliveryDetailViewControllerTests.swift */; };
+		06F89FBF22CB0D47001618C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06F89FBE22CB0D47001618C3 /* GoogleService-Info.plist */; };
+		06F89FC222CB0F16001618C3 /* DeliveryListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89FC122CB0F16001618C3 /* DeliveryListModelTests.swift */; };
+		06F89FC522CC7653001618C3 /* Delivery.json in Resources */ = {isa = PBXBuildFile; fileRef = 06F89FC322CC7653001618C3 /* Delivery.json */; };
+		06F89FC622CC7653001618C3 /* InvalidDelivery.json in Resources */ = {isa = PBXBuildFile; fileRef = 06F89FC422CC7653001618C3 /* InvalidDelivery.json */; };
+		74C81C3F187E29478A8574CC /* Pods_HappyDelivery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71385A286234FEECD81936 /* Pods_HappyDelivery.framework */; };
+		83CE69A6AE660832C64B9B0D /* Pods_HappyDeliveryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC9437E35293078707DB9C9 /* Pods_HappyDeliveryTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06F89F6422C3889E001618C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06F89F4422C3889C001618C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06F89F4B22C3889C001618C3;
+			remoteInfo = HappyDelivery;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03BC901DE5C25F63FB5D2DCA /* Pods-HappyDelivery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyDelivery.release.xcconfig"; path = "Target Support Files/Pods-HappyDelivery/Pods-HappyDelivery.release.xcconfig"; sourceTree = "<group>"; };
+		06F89F4C22C3889C001618C3 /* HappyDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F89F4F22C3889C001618C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		06F89F5122C3889C001618C3 /* DeliveryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListViewController.swift; sourceTree = "<group>"; };
+		06F89F5722C3889C001618C3 /* HappyDelivery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HappyDelivery.xcdatamodel; sourceTree = "<group>"; };
+		06F89F5922C3889E001618C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06F89F5C22C3889E001618C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06F89F5E22C3889E001618C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F89F6322C3889E001618C3 /* HappyDeliveryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyDeliveryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F89F6722C3889E001618C3 /* HappyDeliveryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyDeliveryTests.swift; sourceTree = "<group>"; };
+		06F89F6922C3889E001618C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F89F7222C3889E001618C3 /* HappyDeliveryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyDeliveryUITests.swift; sourceTree = "<group>"; };
+		06F89F7422C3889E001618C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F89F8022C38E94001618C3 /* DeliveryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListTableViewCell.swift; sourceTree = "<group>"; };
+		06F89F8622C48975001618C3 /* DeliveryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListModel.swift; sourceTree = "<group>"; };
+		06F89F8A22C498D7001618C3 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		06F89F8D22C499C5001618C3 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		06F89F9022C4A08A001618C3 /* AppExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
+		06F89F9222C4A583001618C3 /* HappyDelivery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HappyDelivery-Bridging-Header.h"; sourceTree = "<group>"; };
+		06F89F9522C4A794001618C3 /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
+		06F89F9922C4B258001618C3 /* DeliveryListRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListRequestModel.swift; sourceTree = "<group>"; };
+		06F89F9B22C4BFDD001618C3 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		06F89F9F22C5C2FD001618C3 /* DeliveryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailViewController.swift; sourceTree = "<group>"; };
+		06F89FA122C5DA45001618C3 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
+		06F89FAF22CA0074001618C3 /* WebServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesTests.swift; sourceTree = "<group>"; };
+		06F89FB322CA067B001618C3 /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		06F89FB622CA1364001618C3 /* DeliveryListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListViewControllerTests.swift; sourceTree = "<group>"; };
+		06F89FB822CA1435001618C3 /* DeliveryDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		06F89FBE22CB0D47001618C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		06F89FC122CB0F16001618C3 /* DeliveryListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListModelTests.swift; sourceTree = "<group>"; };
+		06F89FC322CC7653001618C3 /* Delivery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Delivery.json; sourceTree = "<group>"; };
+		06F89FC422CC7653001618C3 /* InvalidDelivery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InvalidDelivery.json; sourceTree = "<group>"; };
+		06F89FC722CC7BAD001618C3 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		09D74AE65D5D92F13D01D47A /* Pods-HappyDelivery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyDelivery.debug.xcconfig"; path = "Target Support Files/Pods-HappyDelivery/Pods-HappyDelivery.debug.xcconfig"; sourceTree = "<group>"; };
+		0FC9437E35293078707DB9C9 /* Pods_HappyDeliveryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyDeliveryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC71385A286234FEECD81936 /* Pods_HappyDelivery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyDelivery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B54088F7D5ECA2130C0948D6 /* Pods_HappyDeliveryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyDeliveryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8059E0EB309A2D80AC7DCA4 /* Pods-HappyDeliveryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyDeliveryTests.release.xcconfig"; path = "Target Support Files/Pods-HappyDeliveryTests/Pods-HappyDeliveryTests.release.xcconfig"; sourceTree = "<group>"; };
+		C6C10F9A5E5D580B0F48F6D5 /* Pods-HappyDeliveryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyDeliveryTests.debug.xcconfig"; path = "Target Support Files/Pods-HappyDeliveryTests/Pods-HappyDeliveryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDCF3CB9A19866B6D563D166 /* Pods-HappyDeliveryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyDeliveryUITests.debug.xcconfig"; path = "Target Support Files/Pods-HappyDeliveryUITests/Pods-HappyDeliveryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D52AD48FB01EF304EF210509 /* Pods-HappyDeliveryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyDeliveryUITests.release.xcconfig"; path = "Target Support Files/Pods-HappyDeliveryUITests/Pods-HappyDeliveryUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06F89F4922C3889C001618C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C81C3F187E29478A8574CC /* Pods_HappyDelivery.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F89F6022C3889E001618C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CE69A6AE660832C64B9B0D /* Pods_HappyDeliveryTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06F89F4322C3889C001618C3 = {
+			isa = PBXGroup;
+			children = (
+				06F89FC722CC7BAD001618C3 /* Readme.md */,
+				06F89F4E22C3889C001618C3 /* HappyDelivery */,
+				06F89F6622C3889E001618C3 /* HappyDeliveryTests */,
+				06F89F7122C3889E001618C3 /* HappyDeliveryUITests */,
+				06F89F4D22C3889C001618C3 /* Products */,
+				82417F0BBB3574933605AE4B /* Pods */,
+				EC31ACC1D01122FBC8FE79CC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		06F89F4D22C3889C001618C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F4C22C3889C001618C3 /* HappyDelivery.app */,
+				06F89F6322C3889E001618C3 /* HappyDeliveryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06F89F4E22C3889C001618C3 /* HappyDelivery */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F8822C498AD001618C3 /* View Controllers */,
+				06F89F8922C498BD001618C3 /* WebServices */,
+				06F89F8C22C499B7001618C3 /* App Constant */,
+				06F89FA922C9D599001618C3 /* Resources */,
+				06F89F8F22C4A070001618C3 /* Helper */,
+				06F89F5B22C3889E001618C3 /* LaunchScreen.storyboard */,
+				06F89F4F22C3889C001618C3 /* AppDelegate.swift */,
+				06F89F5E22C3889E001618C3 /* Info.plist */,
+				06F89F5622C3889C001618C3 /* HappyDelivery.xcdatamodeld */,
+			);
+			path = HappyDelivery;
+			sourceTree = "<group>";
+		};
+		06F89F6622C3889E001618C3 /* HappyDeliveryTests */ = {
+			isa = PBXGroup;
+			children = (
+				06F89FC022CB0EDA001618C3 /* ModelDataTests */,
+				06F89FA622C61635001618C3 /* ResponseJson */,
+				06F89FB522CA12A5001618C3 /* ViewControllerTests */,
+				06F89FB222CA0663001618C3 /* CoreDataTests */,
+				06F89FAE22CA0058001618C3 /* WebServicesTests */,
+				06F89F6722C3889E001618C3 /* HappyDeliveryTests.swift */,
+				06F89F6922C3889E001618C3 /* Info.plist */,
+			);
+			path = HappyDeliveryTests;
+			sourceTree = "<group>";
+		};
+		06F89F7122C3889E001618C3 /* HappyDeliveryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F7222C3889E001618C3 /* HappyDeliveryUITests.swift */,
+				06F89F7422C3889E001618C3 /* Info.plist */,
+			);
+			path = HappyDeliveryUITests;
+			sourceTree = "<group>";
+		};
+		06F89F8222C4889C001618C3 /* DeliveryList */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F8522C48953001618C3 /* Model */,
+				06F89F8422C48911001618C3 /* Cell */,
+				06F89F8322C488F4001618C3 /* View Controller */,
+			);
+			path = DeliveryList;
+			sourceTree = "<group>";
+		};
+		06F89F8322C488F4001618C3 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F5122C3889C001618C3 /* DeliveryListViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		06F89F8422C48911001618C3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F8022C38E94001618C3 /* DeliveryListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		06F89F8522C48953001618C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F9822C4B23E001618C3 /* Request Model */,
+				06F89F9722C4B231001618C3 /* Response Model */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06F89F8822C498AD001618C3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F9D22C5C23F001618C3 /* DeliveryDetail */,
+				06F89F8222C4889C001618C3 /* DeliveryList */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		06F89F8922C498BD001618C3 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F8A22C498D7001618C3 /* WebServices.swift */,
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
+		06F89F8C22C499B7001618C3 /* App Constant */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F8D22C499C5001618C3 /* AppConstant.swift */,
+			);
+			path = "App Constant";
+			sourceTree = "<group>";
+		};
+		06F89F8F22C4A070001618C3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F9022C4A08A001618C3 /* AppExtension.swift */,
+				06F89F9222C4A583001618C3 /* HappyDelivery-Bridging-Header.h */,
+				06F89F9522C4A794001618C3 /* Indicator.swift */,
+				06F89F9B22C4BFDD001618C3 /* CoreDataHelper.swift */,
+				06F89FA122C5DA45001618C3 /* Marker.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		06F89F9722C4B231001618C3 /* Response Model */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F8622C48975001618C3 /* DeliveryListModel.swift */,
+			);
+			path = "Response Model";
+			sourceTree = "<group>";
+		};
+		06F89F9822C4B23E001618C3 /* Request Model */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F9922C4B258001618C3 /* DeliveryListRequestModel.swift */,
+			);
+			path = "Request Model";
+			sourceTree = "<group>";
+		};
+		06F89F9D22C5C23F001618C3 /* DeliveryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F9E22C5C2D3001618C3 /* View Controller */,
+			);
+			path = DeliveryDetail;
+			sourceTree = "<group>";
+		};
+		06F89F9E22C5C2D3001618C3 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F9F22C5C2FD001618C3 /* DeliveryDetailViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		06F89FA622C61635001618C3 /* ResponseJson */ = {
+			isa = PBXGroup;
+			children = (
+				06F89FC322CC7653001618C3 /* Delivery.json */,
+				06F89FC422CC7653001618C3 /* InvalidDelivery.json */,
+			);
+			path = ResponseJson;
+			sourceTree = "<group>";
+		};
+		06F89FA922C9D599001618C3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F5922C3889E001618C3 /* Assets.xcassets */,
+				06F89FBE22CB0D47001618C3 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		06F89FAE22CA0058001618C3 /* WebServicesTests */ = {
+			isa = PBXGroup;
+			children = (
+				06F89FAF22CA0074001618C3 /* WebServicesTests.swift */,
+			);
+			path = WebServicesTests;
+			sourceTree = "<group>";
+		};
+		06F89FB222CA0663001618C3 /* CoreDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				06F89FB322CA067B001618C3 /* CoreDataTests.swift */,
+			);
+			path = CoreDataTests;
+			sourceTree = "<group>";
+		};
+		06F89FB522CA12A5001618C3 /* ViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				06F89FB622CA1364001618C3 /* DeliveryListViewControllerTests.swift */,
+				06F89FB822CA1435001618C3 /* DeliveryDetailViewControllerTests.swift */,
+			);
+			path = ViewControllerTests;
+			sourceTree = "<group>";
+		};
+		06F89FC022CB0EDA001618C3 /* ModelDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				06F89FC122CB0F16001618C3 /* DeliveryListModelTests.swift */,
+			);
+			path = ModelDataTests;
+			sourceTree = "<group>";
+		};
+		82417F0BBB3574933605AE4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09D74AE65D5D92F13D01D47A /* Pods-HappyDelivery.debug.xcconfig */,
+				03BC901DE5C25F63FB5D2DCA /* Pods-HappyDelivery.release.xcconfig */,
+				C6C10F9A5E5D580B0F48F6D5 /* Pods-HappyDeliveryTests.debug.xcconfig */,
+				B8059E0EB309A2D80AC7DCA4 /* Pods-HappyDeliveryTests.release.xcconfig */,
+				CDCF3CB9A19866B6D563D166 /* Pods-HappyDeliveryUITests.debug.xcconfig */,
+				D52AD48FB01EF304EF210509 /* Pods-HappyDeliveryUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EC31ACC1D01122FBC8FE79CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC71385A286234FEECD81936 /* Pods_HappyDelivery.framework */,
+				0FC9437E35293078707DB9C9 /* Pods_HappyDeliveryTests.framework */,
+				B54088F7D5ECA2130C0948D6 /* Pods_HappyDeliveryUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06F89F4B22C3889C001618C3 /* HappyDelivery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F89F7722C3889E001618C3 /* Build configuration list for PBXNativeTarget "HappyDelivery" */;
+			buildPhases = (
+				48DE48EF7205DA551922308E /* [CP] Check Pods Manifest.lock */,
+				06F89F4822C3889C001618C3 /* Sources */,
+				06F89F4922C3889C001618C3 /* Frameworks */,
+				06F89F4A22C3889C001618C3 /* Resources */,
+				286EA5959050B39848635705 /* [CP] Embed Pods Frameworks */,
+				06F89FAA22C9E535001618C3 /* ShellScript */,
+				06F89FBD22CB0CDA001618C3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyDelivery;
+			productName = HappyDelivery;
+			productReference = 06F89F4C22C3889C001618C3 /* HappyDelivery.app */;
+			productType = "com.apple.product-type.application";
+		};
+		06F89F6222C3889E001618C3 /* HappyDeliveryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F89F7A22C3889E001618C3 /* Build configuration list for PBXNativeTarget "HappyDeliveryTests" */;
+			buildPhases = (
+				AED89D5A3E91F5AD02952975 /* [CP] Check Pods Manifest.lock */,
+				06F89F5F22C3889E001618C3 /* Sources */,
+				06F89F6022C3889E001618C3 /* Frameworks */,
+				06F89F6122C3889E001618C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06F89F6522C3889E001618C3 /* PBXTargetDependency */,
+			);
+			name = HappyDeliveryTests;
+			productName = HappyDeliveryTests;
+			productReference = 06F89F6322C3889E001618C3 /* HappyDeliveryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06F89F4422C3889C001618C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Sandeep Yadav";
+				TargetAttributes = {
+					06F89F4B22C3889C001618C3 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					06F89F6222C3889E001618C3 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 06F89F4B22C3889C001618C3;
+					};
+				};
+			};
+			buildConfigurationList = 06F89F4722C3889C001618C3 /* Build configuration list for PBXProject "HappyDelivery" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06F89F4322C3889C001618C3;
+			productRefGroup = 06F89F4D22C3889C001618C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06F89F4B22C3889C001618C3 /* HappyDelivery */,
+				06F89F6222C3889E001618C3 /* HappyDeliveryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06F89F4A22C3889C001618C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F89F5D22C3889E001618C3 /* LaunchScreen.storyboard in Resources */,
+				06F89FBF22CB0D47001618C3 /* GoogleService-Info.plist in Resources */,
+				06F89F5A22C3889E001618C3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F89F6122C3889E001618C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F89FC522CC7653001618C3 /* Delivery.json in Resources */,
+				06F89FC622CC7653001618C3 /* InvalidDelivery.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06F89FAA22C9E535001618C3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		06F89FBD22CB0CDA001618C3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+		286EA5959050B39848635705 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HappyDelivery/Pods-HappyDelivery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HappyDelivery/Pods-HappyDelivery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HappyDelivery/Pods-HappyDelivery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48DE48EF7205DA551922308E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HappyDelivery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AED89D5A3E91F5AD02952975 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HappyDeliveryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06F89F4822C3889C001618C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F89F5222C3889C001618C3 /* DeliveryListViewController.swift in Sources */,
+				06F89F8122C38E94001618C3 /* DeliveryListTableViewCell.swift in Sources */,
+				06F89F8E22C499C5001618C3 /* AppConstant.swift in Sources */,
+				06F89F9122C4A08A001618C3 /* AppExtension.swift in Sources */,
+				06F89F8B22C498D7001618C3 /* WebServices.swift in Sources */,
+				06F89F9A22C4B258001618C3 /* DeliveryListRequestModel.swift in Sources */,
+				06F89F5022C3889C001618C3 /* AppDelegate.swift in Sources */,
+				06F89FA022C5C2FD001618C3 /* DeliveryDetailViewController.swift in Sources */,
+				06F89FA222C5DA45001618C3 /* Marker.swift in Sources */,
+				06F89F5822C3889C001618C3 /* HappyDelivery.xcdatamodeld in Sources */,
+				06F89F9C22C4BFDD001618C3 /* CoreDataHelper.swift in Sources */,
+				06F89F9622C4A794001618C3 /* Indicator.swift in Sources */,
+				06F89F8722C48975001618C3 /* DeliveryListModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F89F5F22C3889E001618C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F89FB922CA1435001618C3 /* DeliveryDetailViewControllerTests.swift in Sources */,
+				06F89FB022CA0074001618C3 /* WebServicesTests.swift in Sources */,
+				06F89FB722CA1364001618C3 /* DeliveryListViewControllerTests.swift in Sources */,
+				06F89FB422CA067B001618C3 /* CoreDataTests.swift in Sources */,
+				06F89FC222CB0F16001618C3 /* DeliveryListModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06F89F6522C3889E001618C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06F89F4B22C3889C001618C3 /* HappyDelivery */;
+			targetProxy = 06F89F6422C3889E001618C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		06F89F5B22C3889E001618C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06F89F5C22C3889E001618C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06F89F7522C3889E001618C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		06F89F7622C3889E001618C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06F89F7822C3889E001618C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09D74AE65D5D92F13D01D47A /* Pods-HappyDelivery.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HappyDelivery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.happydelivery.HappyDelivery;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HappyDelivery/Helper/HappyDelivery-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		06F89F7922C3889E001618C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03BC901DE5C25F63FB5D2DCA /* Pods-HappyDelivery.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HappyDelivery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.happydelivery.HappyDelivery;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HappyDelivery/Helper/HappyDelivery-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		06F89F7B22C3889E001618C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6C10F9A5E5D580B0F48F6D5 /* Pods-HappyDeliveryTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HappyDeliveryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.happydelivery.HappyDeliveryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyDelivery.app/HappyDelivery";
+			};
+			name = Debug;
+		};
+		06F89F7C22C3889E001618C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8059E0EB309A2D80AC7DCA4 /* Pods-HappyDeliveryTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HappyDeliveryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.happydelivery.HappyDeliveryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyDelivery.app/HappyDelivery";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06F89F4722C3889C001618C3 /* Build configuration list for PBXProject "HappyDelivery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F89F7522C3889E001618C3 /* Debug */,
+				06F89F7622C3889E001618C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F89F7722C3889E001618C3 /* Build configuration list for PBXNativeTarget "HappyDelivery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F89F7822C3889E001618C3 /* Debug */,
+				06F89F7922C3889E001618C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F89F7A22C3889E001618C3 /* Build configuration list for PBXNativeTarget "HappyDeliveryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F89F7B22C3889E001618C3 /* Debug */,
+				06F89F7C22C3889E001618C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		06F89F5622C3889C001618C3 /* HappyDelivery.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				06F89F5722C3889C001618C3 /* HappyDelivery.xcdatamodel */,
+			);
+			currentVersion = 06F89F5722C3889C001618C3 /* HappyDelivery.xcdatamodel */;
+			path = HappyDelivery.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 06F89F4422C3889C001618C3 /* Project object */;
+}

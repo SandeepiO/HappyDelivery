@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>835845529125-jbgg9ttoorepq8orspv28krqarvfhu9h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.835845529125-jbgg9ttoorepq8orspv28krqarvfhu9h</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCNF5MSujwNW_COdb9T6-1i7uBiT_7_9RQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>835845529125</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.happydelivery.HappyDelivery</string>
+	<key>PROJECT_ID</key>
+	<string>happy-delivery-58fbe</string>
+	<key>STORAGE_BUCKET</key>
+	<string>happy-delivery-58fbe.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:835845529125:ios:33fc8490cbcc7990</string>
+	<key>DATABASE_URL</key>
+	<string>https://happy-delivery-58fbe.firebaseio.com</string>
+</dict>
+</plist>

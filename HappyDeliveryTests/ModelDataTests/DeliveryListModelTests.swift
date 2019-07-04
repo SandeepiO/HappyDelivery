@@ -24,7 +24,7 @@ class DeliveryListModelTests: XCTestCase {
     }
     
     func testArrayDeliveryListResponseModel() {
-        
+        // check model
         var array = NSMutableArray()
         
         for _ in 0..<10 {
@@ -35,7 +35,7 @@ class DeliveryListModelTests: XCTestCase {
             
         }
         
-        XCTAssertNotNil(DeliveryListModel.arrayModelFromDictionary(array: array))
+        XCTAssertNotNil(ModelConversion.arrayModelFromDictionary(array: array))
         
     }
     

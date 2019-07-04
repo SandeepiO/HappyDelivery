@@ -10,6 +10,11 @@ import Foundation
 
 class DeliveryListRequestModel {
     
+    struct ApiKeys {
+        static let offset = "offset"
+        static let limit = "limit"
+    }
+    
     var requestBody: [String: NSObject] = [:]
     
     init(builder: Builder) {
@@ -22,7 +27,7 @@ class DeliveryListRequestModel {
         
         func offset(index: Int) -> Builder {
             
-            requestBody["offset"] = "\(index)" as NSObject
+            requestBody[ApiKeys.offset] = "\(index)" as NSObject
             
             return self
             
@@ -30,7 +35,7 @@ class DeliveryListRequestModel {
         
         func limit(index: Int) -> Builder {
             
-            requestBody["limit"] = "\(index)" as NSObject
+            requestBody[ApiKeys.limit] = "\(index)" as NSObject
             
             return self
             
@@ -42,6 +47,9 @@ class DeliveryListRequestModel {
     
     }
     
-    func deliveryList() -> String {return WebServices.shared.baseUrl + ApiEndPoint().deliveries}
+    func deliveryListUrl() -> String {
+        return WebServices.shared.baseUrl + ApiEndPoint().deliveries
+        
+    }
     
 }

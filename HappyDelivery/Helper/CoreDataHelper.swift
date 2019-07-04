@@ -89,7 +89,7 @@ class CoreDataHelper {
             
             let deliveryListManagedObject = try managedContext.fetch(fetchRequest)
             
-            let model = DeliveryListModel.arrayModelFromManagedObject(array: deliveryListManagedObject)
+            let model = ModelConversion.arrayModelFromManagedObject(array: deliveryListManagedObject)
 
             return model
             

@@ -35,7 +35,7 @@ class WebServicesTest: XCTestCase {
             .limit(index: kListLimit)
             .build()
         
-        WebServices.shared.requestForGetType(url: requestModel.deliveryList(), parameters: requestModel.requestBody as [NSString: NSObject], { (response) in
+        WebServices.shared.requestForGetType(url: requestModel.deliveryListUrl(), parameters: requestModel.requestBody as [NSString: NSObject], { (response) in
             
             XCTAssertNotNil(response, "Delivery List fetched")
             XCTAssertEqual(20, (response as? NSArray)?.count ?? 0)
@@ -77,7 +77,7 @@ class WebServicesTest: XCTestCase {
             .limit(index: kListLimit)
             .build()
         
-        WebServices.shared.requestForGetType(url: requestModel.deliveryList(), parameters: requestModel.requestBody as [NSString: NSObject], { (response) in
+        WebServices.shared.requestForGetType(url: requestModel.deliveryListUrl(), parameters: requestModel.requestBody as [NSString: NSObject], { (response) in
             
             XCTAssertNotNil(response, "Delivery List not fetched")
             resultExpectation.fulfill()

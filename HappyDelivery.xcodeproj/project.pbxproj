@@ -11,7 +11,6 @@
 		06F89F5222C3889C001618C3 /* DeliveryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F5122C3889C001618C3 /* DeliveryListViewController.swift */; };
 		06F89F5822C3889C001618C3 /* HappyDelivery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F5622C3889C001618C3 /* HappyDelivery.xcdatamodeld */; };
 		06F89F5A22C3889E001618C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F89F5922C3889E001618C3 /* Assets.xcassets */; };
-		06F89F5D22C3889E001618C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F89F5B22C3889E001618C3 /* LaunchScreen.storyboard */; };
 		06F89F8122C38E94001618C3 /* DeliveryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F8022C38E94001618C3 /* DeliveryListTableViewCell.swift */; };
 		06F89F8722C48975001618C3 /* DeliveryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F8622C48975001618C3 /* DeliveryListModel.swift */; };
 		06F89F8B22C498D7001618C3 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F8A22C498D7001618C3 /* WebServices.swift */; };
@@ -30,6 +29,8 @@
 		06F89FC222CB0F16001618C3 /* DeliveryListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89FC122CB0F16001618C3 /* DeliveryListModelTests.swift */; };
 		06F89FC522CC7653001618C3 /* Delivery.json in Resources */ = {isa = PBXBuildFile; fileRef = 06F89FC322CC7653001618C3 /* Delivery.json */; };
 		06F89FC622CC7653001618C3 /* InvalidDelivery.json in Resources */ = {isa = PBXBuildFile; fileRef = 06F89FC422CC7653001618C3 /* InvalidDelivery.json */; };
+		06F89FCB22CDB0B8001618C3 /* ModelConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89FCA22CDB0B8001618C3 /* ModelConversion.swift */; };
+		06F89FDA22CDBF90001618C3 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06F89FDC22CDBF90001618C3 /* Localization.strings */; };
 		74C81C3F187E29478A8574CC /* Pods_HappyDelivery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71385A286234FEECD81936 /* Pods_HappyDelivery.framework */; };
 		83CE69A6AE660832C64B9B0D /* Pods_HappyDeliveryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC9437E35293078707DB9C9 /* Pods_HappyDeliveryTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,7 +52,6 @@
 		06F89F5122C3889C001618C3 /* DeliveryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListViewController.swift; sourceTree = "<group>"; };
 		06F89F5722C3889C001618C3 /* HappyDelivery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HappyDelivery.xcdatamodel; sourceTree = "<group>"; };
 		06F89F5922C3889E001618C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		06F89F5C22C3889E001618C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06F89F5E22C3889E001618C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06F89F6322C3889E001618C3 /* HappyDeliveryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyDeliveryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F89F6722C3889E001618C3 /* HappyDeliveryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyDeliveryTests.swift; sourceTree = "<group>"; };
@@ -78,6 +78,8 @@
 		06F89FC322CC7653001618C3 /* Delivery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Delivery.json; sourceTree = "<group>"; };
 		06F89FC422CC7653001618C3 /* InvalidDelivery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InvalidDelivery.json; sourceTree = "<group>"; };
 		06F89FC722CC7BAD001618C3 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		06F89FCA22CDB0B8001618C3 /* ModelConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConversion.swift; sourceTree = "<group>"; };
+		06F89FDB22CDBF90001618C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
 		09D74AE65D5D92F13D01D47A /* Pods-HappyDelivery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyDelivery.debug.xcconfig"; path = "Target Support Files/Pods-HappyDelivery/Pods-HappyDelivery.debug.xcconfig"; sourceTree = "<group>"; };
 		0FC9437E35293078707DB9C9 /* Pods_HappyDeliveryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyDeliveryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC71385A286234FEECD81936 /* Pods_HappyDelivery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyDelivery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 		06F89F4322C3889C001618C3 = {
 			isa = PBXGroup;
 			children = (
+				06F89FDC22CDBF90001618C3 /* Localization.strings */,
 				06F89FC722CC7BAD001618C3 /* Readme.md */,
 				06F89F4E22C3889C001618C3 /* HappyDelivery */,
 				06F89F6622C3889E001618C3 /* HappyDeliveryTests */,
@@ -133,15 +136,12 @@
 		06F89F4E22C3889C001618C3 /* HappyDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				06F89FC822CCE27E001618C3 /* App Config */,
 				06F89F8822C498AD001618C3 /* View Controllers */,
 				06F89F8922C498BD001618C3 /* WebServices */,
 				06F89F8C22C499B7001618C3 /* App Constant */,
 				06F89FA922C9D599001618C3 /* Resources */,
 				06F89F8F22C4A070001618C3 /* Helper */,
-				06F89F5B22C3889E001618C3 /* LaunchScreen.storyboard */,
-				06F89F4F22C3889C001618C3 /* AppDelegate.swift */,
-				06F89F5E22C3889E001618C3 /* Info.plist */,
-				06F89F5622C3889C001618C3 /* HappyDelivery.xcdatamodeld */,
 			);
 			path = HappyDelivery;
 			sourceTree = "<group>";
@@ -198,6 +198,7 @@
 		06F89F8522C48953001618C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				06F89FC922CDB07E001618C3 /* Model Conversion */,
 				06F89F9822C4B23E001618C3 /* Request Model */,
 				06F89F9722C4B231001618C3 /* Response Model */,
 			);
@@ -287,6 +288,7 @@
 			children = (
 				06F89F5922C3889E001618C3 /* Assets.xcassets */,
 				06F89FBE22CB0D47001618C3 /* GoogleService-Info.plist */,
+				06F89F5622C3889C001618C3 /* HappyDelivery.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -322,6 +324,23 @@
 				06F89FC122CB0F16001618C3 /* DeliveryListModelTests.swift */,
 			);
 			path = ModelDataTests;
+			sourceTree = "<group>";
+		};
+		06F89FC822CCE27E001618C3 /* App Config */ = {
+			isa = PBXGroup;
+			children = (
+				06F89F4F22C3889C001618C3 /* AppDelegate.swift */,
+				06F89F5E22C3889E001618C3 /* Info.plist */,
+			);
+			path = "App Config";
+			sourceTree = "<group>";
+		};
+		06F89FC922CDB07E001618C3 /* Model Conversion */ = {
+			isa = PBXGroup;
+			children = (
+				06F89FCA22CDB0B8001618C3 /* ModelConversion.swift */,
+			);
+			path = "Model Conversion";
 			sourceTree = "<group>";
 		};
 		82417F0BBB3574933605AE4B /* Pods */ = {
@@ -415,8 +434,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = 06F89F4322C3889C001618C3;
 			productRefGroup = 06F89F4D22C3889C001618C3 /* Products */;
@@ -434,8 +453,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06F89F5D22C3889E001618C3 /* LaunchScreen.storyboard in Resources */,
 				06F89FBF22CB0D47001618C3 /* GoogleService-Info.plist in Resources */,
+				06F89FDA22CDBF90001618C3 /* Localization.strings in Resources */,
 				06F89F5A22C3889E001618C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F89F5222C3889C001618C3 /* DeliveryListViewController.swift in Sources */,
+				06F89FCB22CDB0B8001618C3 /* ModelConversion.swift in Sources */,
 				06F89F8122C38E94001618C3 /* DeliveryListTableViewCell.swift in Sources */,
 				06F89F8E22C499C5001618C3 /* AppConstant.swift in Sources */,
 				06F89F9122C4A08A001618C3 /* AppExtension.swift in Sources */,
@@ -594,12 +614,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		06F89F5B22C3889E001618C3 /* LaunchScreen.storyboard */ = {
+		06F89FDC22CDBF90001618C3 /* Localization.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				06F89F5C22C3889E001618C3 /* Base */,
+				06F89FDB22CDBF90001618C3 /* en */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Localization.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -728,7 +748,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HappyDelivery/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HappyDelivery/App Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -750,7 +770,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HappyDelivery/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HappyDelivery/App Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

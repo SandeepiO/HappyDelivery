@@ -1,0 +1,16 @@
+/* 
+  Localization.strings
+  HappyDelivery
+
+  Created by Sandeep Yadav on 04/07/19.
+  Copyright © 2019 Sandeep Yadav. All rights reserved.
+*/
+
+"Things to deliver" = "Things to deliver";
+"Delivery Details" = "Delivery Details";
+"Retry" = "Retry";
+"Ok" = "Ok";
+"Cancel" = "Cancel";
+"Happy Delivery" = "Happy Delivery";
+"Something Went Wrong, Please try again!" = "Something Went Wrong, Please try again!";
+"No result Found, Please try agian!" = "No result Found, Please try agian!";

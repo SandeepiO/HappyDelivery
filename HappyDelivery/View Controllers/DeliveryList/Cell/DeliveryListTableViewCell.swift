@@ -41,7 +41,7 @@ class DeliveryListTableViewCell: UITableViewCell {
             self.deliveryItemImageView.image = UIImage()
         }
         
-        self.descriptionLabel.text = (data.description ?? "") + " at " + (data.location?.address ?? "")
+        self.descriptionLabel.text = (data.description ?? "") + StringValue.at + (data.location?.address ?? "")
         
     }
     
@@ -53,7 +53,7 @@ class DeliveryListTableViewCell: UITableViewCell {
         deliveryItemImageView = UIImageView()
         descriptionLabel = UILabel()
         
-        self.descriptionLabel.numberOfLines = 0
+        self.descriptionLabel.numberOfLines = kNumberOfNumber
         self.backView.backgroundColor = .white
         
         backView.addSubview(deliveryItemImageView)
@@ -64,36 +64,51 @@ class DeliveryListTableViewCell: UITableViewCell {
         deliveryItemImageView?.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel?.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint(item: deliveryItemImageView as Any, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: backView, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1.0, constant: 10).isActive = true
+        self.addConstraintForDeliveryImageView()
+        self.addConstraintForDescriptionLabel()
+        self.addConstraintForBackView()
+        self.backView.setBorderAndShadow()
         
-        NSLayoutConstraint(item: deliveryItemImageView as Any, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: backView, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1.0, constant: 10).isActive = true
+    }
+    
+    func addConstraintForDeliveryImageView() {
         
-        NSLayoutConstraint(item: deliveryItemImageView as Any, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.height, multiplier: 1.0, constant: 60).isActive = true
+        NSLayoutConstraint(item: deliveryItemImageView as Any, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: backView, attribute: NSLayoutConstraint.Attribute.top, multiplier: Constraint.Multiplier.one, constant: Constraint.Constant.ten).isActive = true
         
-        NSLayoutConstraint(item: deliveryItemImageView as Any, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.width, multiplier: 1.0, constant: 60).isActive = true
+        NSLayoutConstraint(item: deliveryItemImageView as Any, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: backView, attribute: NSLayoutConstraint.Attribute.leading, multiplier: Constraint.Multiplier.one, constant: Constraint.Constant.ten).isActive = true
         
-        let bottomConstriant = NSLayoutConstraint(item: deliveryItemImageView as Any, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.lessThanOrEqual, toItem: backView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1.0, constant: -10)
+        NSLayoutConstraint(item: deliveryItemImageView as Any, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.height, multiplier: Constraint.Constant.ten, constant: Constraint.Constant.sixty).isActive = true
         
-        bottomConstriant.priority = UILayoutPriority(rawValue: 500)
+        NSLayoutConstraint(item: deliveryItemImageView as Any, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.width, multiplier: Constraint.Multiplier.one, constant: Constraint.Constant.sixty).isActive = true
+        
+        let bottomConstriant = NSLayoutConstraint(item: deliveryItemImageView as Any, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.lessThanOrEqual, toItem: backView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: Constraint.Multiplier.one, constant: Constraint.Constant.minusTen)
+        
+        bottomConstriant.priority = UILayoutPriority(rawValue: Constraint.Priority.medium)
         bottomConstriant.isActive = true
         
-        NSLayoutConstraint(item: descriptionLabel as Any, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: deliveryItemImageView, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1.0, constant: 0).isActive = true
+    }
+    
+    func addConstraintForDescriptionLabel() {
+    
+        NSLayoutConstraint(item: descriptionLabel as Any, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: deliveryItemImageView, attribute: NSLayoutConstraint.Attribute.top, multiplier: Constraint.Multiplier.one, constant: Constraint.Constant.zero).isActive = true
         
-        NSLayoutConstraint(item: descriptionLabel as Any, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: deliveryItemImageView, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1.0, constant: 10).isActive = true
+        NSLayoutConstraint(item: descriptionLabel as Any, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: deliveryItemImageView, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: Constraint.Multiplier.one, constant: Constraint.Constant.ten).isActive = true
         
-        NSLayoutConstraint(item: descriptionLabel as Any, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: backView, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1.0, constant: -10).isActive = true
+        NSLayoutConstraint(item: descriptionLabel as Any, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: backView, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: Constraint.Multiplier.one, constant: Constraint.Constant.minusTen).isActive = true
         
-        NSLayoutConstraint(item: descriptionLabel as Any, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: backView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1.0, constant: -20).isActive = true
+        NSLayoutConstraint(item: descriptionLabel as Any, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: backView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: Constraint.Multiplier.one, constant: Constraint.Constant.minusTwenty).isActive = true
+    
+    }
+    
+    func addConstraintForBackView() {
         
-        NSLayoutConstraint(item: backView as Any, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: .leading, multiplier: 1.0, constant: 10).isActive = true
+        NSLayoutConstraint(item: backView as Any, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: .leading, multiplier: Constraint.Multiplier.one, constant: Constraint.Constant.ten).isActive = true
         
-        NSLayoutConstraint(item: backView as Any, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: .top, multiplier: 1.0, constant: 10).isActive = true
+        NSLayoutConstraint(item: backView as Any, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: .top, multiplier: Constraint.Multiplier.one, constant: Constraint.Constant.ten).isActive = true
         
-        NSLayoutConstraint(item: backView as Any, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: .trailing, multiplier: 1.0, constant: -10).isActive = true
+        NSLayoutConstraint(item: backView as Any, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: .trailing, multiplier: Constraint.Multiplier.one, constant: Constraint.Constant.minusTen).isActive = true
         
-        NSLayoutConstraint(item: backView as Any, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: .bottom, multiplier: 1.0, constant: -10).isActive = true
-        
-        self.backView.setBorderAndShadow()
+        NSLayoutConstraint(item: backView as Any, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: contentView, attribute: .bottom, multiplier: Constraint.Multiplier.one, constant: Constraint.Constant.minusTen).isActive = true
         
     }
     

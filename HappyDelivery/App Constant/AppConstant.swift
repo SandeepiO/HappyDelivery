@@ -11,9 +11,9 @@ struct ApiEndPoint {
 }
 
 struct AlertTile {
-    let appTitle = "Happy Delivery"
-    let somethingWenWrong = "Something Went Wrong, Please try again!"
-    let resultNotFetched = "No result Found, Please try agian!"
+    let appTitle = "Happy Delivery".localized
+    let somethingWenWrong = "Something Went Wrong, Please try again!".localized
+    let resultNotFetched = "No result Found, Please try agian!".localized
 }
 
 struct CoreDataEntityName {
@@ -36,10 +36,44 @@ struct LocationEntityAttribute {
 }
 
 struct NavigationTitle {
-    let deliveryList = "Things to deliver"
-    let deliveryDetail = "Delivery Details"
+    let deliveryList = "Things to deliver".localized
+    let deliveryDetail = "Delivery Details".localized
+}
+
+struct AlertKey {
+    static let retry = "Retry".localized
+    static let ok = "Ok".localized
+    static let cancel = "Cancel".localized
+}
+
+struct StringValue {
+    static let at = " at "
 }
 
 let kListLimit = 20
 let kLocationMeter = 1000
 let kTableViewDefaultHeight = 100
+let kNumberOfNumber = 0
+
+struct Constraint {
+    
+    struct Constant {
+        
+        static let zero: CGFloat = 0
+        static let ten: CGFloat = 10
+        static let twenty: CGFloat = 20
+        static let eight: CGFloat = 8
+        static let sixty: CGFloat = 60
+        static let minusTen: CGFloat = -10
+        static let minusTwenty: CGFloat = -20
+        
+    }
+    
+    struct Multiplier {
+        static let one: CGFloat = 1.0
+    }
+    
+    struct Priority {
+        static let medium: Float = 500
+    }
+}

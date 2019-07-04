@@ -14,7 +14,7 @@ extension UIViewController {
         
         let alert = UIAlertController(title: AlertTile().appTitle, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { (action) in
+        let okAction = UIAlertAction(title: AlertKey.ok, style: UIAlertAction.Style.default) { (action) in
             
             completion?()
             
@@ -34,7 +34,7 @@ extension UIViewController {
             completion?()
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil)
+        let cancelAction = UIAlertAction(title: AlertKey.cancel, style: UIAlertAction.Style.default, handler: nil)
         
         alert.addAction(okAction)
         alert.addAction(cancelAction)
@@ -58,4 +58,14 @@ extension UIView {
         
     }
     
+}
+
+public extension String {
+    var localized: String {
+        // currentLanguageCode is e.g. "en" or "nl"
+        let path = Bundle.main.path(forResource: "en", ofType: "lproj")
+        let bundle = Bundle(path: path!)
+        
+        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
+    }
 }

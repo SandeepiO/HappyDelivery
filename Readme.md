@@ -35,6 +35,19 @@ Swift 5.0
 - Fabric
 - Crashlytics
 
+# Assumptions        
+-    The app is designed for iPhones only .       
+-   App  supports multi languages , but right now only english language text is displaying.
+-    Mobile platform supported: iOS (10.x, 11.x, 12.x)        
+-   Device support - iPhone 5s, iPhone 6 Series, iPhone SE, iPhone 7 Series, iPhone 8 Series, iPhone X Series.    
+-    iPhone app support would be limited to portrait mode.
+-   Data caching is available, but complete data syncing is not supported right now (for ex deletion of items) , however duplicate items are being checked on the basis of "id".
+
+# Features
+- Crash Reporting
+- Map Annotation
+- Lisitng Animation
+
 # SwiftLint
 - Integration of SwiftLint into an Xcode scheme to keep a codebase consistent and maintainable .
 - Install the swiftLint via cocoaPod and need to add a new "Run Script Phase" with:
@@ -60,15 +73,9 @@ Swift 5.0
 - Unit testing is done by using XCTest.
 - To run tests click Product->Test or (cmd+U)
 
-# Assumptions        
--    The app is designed for iPhones only .       
--   App  supports multi languages , but right now only english language text is displaying.
--    Mobile platform supported: iOS (10.x, 11.x, 12.x)        
--   Device support - iPhone 5s, iPhone 6 Series, iPhone SE, iPhone 7 Series, iPhone 8 Series, iPhone X Series.    
--    iPhone app support would be limited to portrait mode.
--   Data caching is available, but complete data syncing is not supported right now (for ex deletion of items) , however duplicate items are being checked on the basis of "id".
-
 # Scope for Improvement
 - UITesting
+
+# ScreenShot
 
 

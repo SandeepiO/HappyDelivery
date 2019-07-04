@@ -12,12 +12,13 @@ import MapKit
 
 class DeliveryDetailViewControllerTests: XCTestCase {
     
-    var deliveryDetailVC = DeliveryDetailViewController()
+    var deliveryDetailVC: DeliveryDetailViewController!
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class
-        deliveryDetailVC.deliveryListData = DeliveryListModel(dictionary: [:])
+        deliveryDetailVC = DeliveryDetailViewController(model: DeliveryListModel(dictionary: [:])!)
         deliveryDetailVC.viewDidLoad()
+        
     }
     
     func testMapViewDelegateConformance() {
@@ -25,6 +26,7 @@ class DeliveryDetailViewControllerTests: XCTestCase {
     }
     
     func testNotNilElements() {
+        
         XCTAssertNotNil(deliveryDetailVC.title)
         XCTAssertNotNil(deliveryDetailVC.deliveryListData)
         XCTAssertNotNil(deliveryDetailVC.mapView)

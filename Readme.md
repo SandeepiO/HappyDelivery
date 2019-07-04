@@ -79,5 +79,5 @@ Swift 5.0
 # ScreenShot
 
 ![Simulator Screen Shot - iPhone Xʀ - 2019-07-04 at 12 09 22](https://user-images.githubusercontent.com/46416595/60644834-d46f0d80-9e54-11e9-84a1-d5f22ece9085.png)
-![Simulator Screen Shot - iPhone Xʀ - 2019-07-04 at 12 09 42](https://user-images.githubusercontent.com/46416595/60644843-db961b80-9e54-11e9-9901-4d8faf45452a.png)
 ![Simulator Screen Shot - iPhone Xʀ - 2019-07-04 at 12 09 48](https://user-images.githubusercontent.com/46416595/60644850-df29a280-9e54-11e9-8269-91f14f4a669e.png)
+![Simulator Screen Shot - iPhone Xʀ - 2019-07-04 at 12 09 42](https://user-images.githubusercontent.com/46416595/60644843-db961b80-9e54-11e9-9901-4d8faf45452a.png)

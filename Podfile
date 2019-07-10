@@ -8,6 +8,7 @@ pod 'Alamofire', '4.8.2'
 pod 'SDWebImage', '5.0'
 pod 'OHHTTPStubs/Swift', '8.0.0'
 pod 'SwiftLint', '0.31.0'
+pod 'Firebase/Analytics', '6.3.0'
 pod 'Fabric', '1.10.2'
 pod 'Crashlytics', '3.13.2'
 

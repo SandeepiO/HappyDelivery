@@ -12,70 +12,35 @@ import CoreData
 
 class CoreDataTests: XCTestCase {
     
-    lazy var managedObjectModel: NSManagedObjectModel = {
-        let managedObjectModel = NSManagedObjectModel.mergedModel(from: [Bundle.main] )!
-        return managedObjectModel
-    }()
-    
-    lazy var mockPersistantContainer: NSPersistentContainer = {
-        
-        let container = NSPersistentContainer(name: "HappyDelivery", managedObjectModel: self.managedObjectModel)
-        let description = NSPersistentStoreDescription()
-        description.type = NSInMemoryStoreType
-        description.shouldAddStoreAsynchronously = false // Make it simpler in test env
-        
-        container.persistentStoreDescriptions = [description]
-        container.loadPersistentStores { (description, error) in
-            // Check if the data store is in memory
-            precondition( description.type == NSInMemoryStoreType )
-            
-            // Check if creating container wrong
-            if let error = error {
-                fatalError("Create an in-memory coordinator failed \(error)")
-            }
-        }
-        return container
-    }()
-    
     override func setUp() {
-        
-    }
-    
-    override func tearDown() {
-        flushData()
+        CoreDataHelper.shared.managedContext = CoreDataMock().mockPersistantContainer.viewContext
     }
     
     func testCheckDeliveryListItem() {
-        
-        XCTAssertNotNil(CoreDataHelper.shared.deliveryEntityExists(id: 0))
-        
+        let dictionary: NSDictionary = ["id": 0]
+        CoreDataHelper.shared.save(deliveryList: [DeliveryListModel(dictionary: dictionary)!])
+        XCTAssertTrue(CoreDataHelper.shared.deliveryEntityExists(id: 0))
     }
     
     func testAddDeliveryList() {
-        
-        CoreDataHelper.shared.managedContext = mockPersistantContainer.viewContext
-        
         let dictionary: NSDictionary = ["id": 0]
-        
         CoreDataHelper.shared.save(deliveryList: [DeliveryListModel(dictionary: dictionary)!])
-        
+        XCTAssertTrue(CoreDataHelper.shared.getDeliveryListData(offset: 0, limit: 20).count == 1)
     }
-    
-    func flushData() {
-        
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest<NSFetchRequestResult>(entityName: CoreDataEntityName().deliveryList)
-        let objs = try? mockPersistantContainer.viewContext.fetch(fetchRequest)
-        if let objs = objs {
-            for case let obj as NSManagedObject in objs {
-                mockPersistantContainer.viewContext.delete(obj)
-            }
-            do {
-                try mockPersistantContainer.viewContext.save()
-            } catch {
-                debugPrint("Save context fail \(error)")
-            }
-        }
-        
+
+    func testExistedData() {
+        XCTAssertFalse(CoreDataHelper.shared.deliveryEntityExists(id: 0))
+        let dictionary: NSDictionary = ["id": 0]
+        CoreDataHelper.shared.save(deliveryList: [DeliveryListModel(dictionary: dictionary)!])
+        XCTAssertTrue(CoreDataHelper.shared.deliveryEntityExists(id: 0))
     }
-    
+
+    func testEmptyData() {
+        XCTAssertTrue(CoreDataHelper.shared.getDeliveryListData(offset: 0, limit: 20).count == 0)
+    }
+
+    override func tearDown() {
+        super.tearDown()
+    }
+
 }

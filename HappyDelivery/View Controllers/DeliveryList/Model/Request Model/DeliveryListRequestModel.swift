@@ -22,34 +22,25 @@ class DeliveryListRequestModel {
     }
     
     internal class Builder {
-    
         var requestBody: [String: NSObject] = [:]
         
         func offset(index: Int) -> Builder {
-            
             requestBody[ApiKeys.offset] = "\(index)" as NSObject
-            
             return self
-            
         }
         
         func limit(index: Int) -> Builder {
-            
             requestBody[ApiKeys.limit] = "\(index)" as NSObject
-            
             return self
-            
         }
         
         func build() -> DeliveryListRequestModel {
             return DeliveryListRequestModel(builder: self)
         }
-    
     }
     
     func deliveryListUrl() -> String {
-        return WebServices.shared.baseUrl + ApiEndPoint().deliveries
-        
+        return WebServices().baseUrl + ApiEndPoint().deliveries
     }
     
 }

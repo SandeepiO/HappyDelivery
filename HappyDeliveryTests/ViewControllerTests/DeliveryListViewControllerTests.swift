@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import OHHTTPStubs
 @testable import HappyDelivery
 
 class DeliveryListViewControllerTests: XCTestCase {
@@ -14,9 +15,8 @@ class DeliveryListViewControllerTests: XCTestCase {
     var deliveryListViewController: DeliveryListViewController!
     
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        let navigationController = UIApplication.shared.delegate?.window??.rootViewController as! UINavigationController
-        deliveryListViewController = navigationController.viewControllers.first as? DeliveryListViewController
+        deliveryListViewController = DeliveryListViewController()
+        deliveryListViewController.dataManager = DataManagerMock()
     }
     
     func testTableViewDelegateConformance() {
@@ -24,24 +24,51 @@ class DeliveryListViewControllerTests: XCTestCase {
     }
     
     func testRequiredElementShouldNotNil() {
-        XCTAssertNotNil(deliveryListViewController.title)
         XCTAssertNotNil(deliveryListViewController.tableView)
+        XCTAssertNil(deliveryListViewController.title)
+        deliveryListViewController.setUpUI()
+        XCTAssertNotNil(deliveryListViewController.title)
     }
     
-    func testGetDeliveryList() {
-        
-        XCTAssertNotNil(deliveryListViewController.getDeliveryList())
-        XCTAssertNotNil(deliveryListViewController.getNextPageData())
-        
+    func testGetDeliveryListFromServerSuccess() {
+        (deliveryListViewController.dataManager.webService as? WebServicesMock)?.isError = false
+        deliveryListViewController.getDeliveryListFromServer()
+        XCTAssert(deliveryListViewController.deliveryList.count == 1)
     }
-    
-    func testShowAlert() {
-        
-        XCTAssertNoThrow(deliveryListViewController.showAlert("", nil))
-        
+
+    func testGetDeliveryListFromServerError() {
+        (deliveryListViewController.dataManager.webService as? WebServicesMock)?.isError = true
+        deliveryListViewController.getDeliveryListFromServer()
+        XCTAssert(deliveryListViewController.deliveryList.count == 0)
+    }
+
+    func testGetDeliveryListNexPageDataFromServerSuccess() {
+        (deliveryListViewController.dataManager.webService as? WebServicesMock)?.isError = false
+        deliveryListViewController.getDeliveryListNextPageData()
+        XCTAssert(deliveryListViewController.deliveryList.count == 1)
+    }
+
+    func testGetDeliveryListNextPageDataFromServerError() {
+        (deliveryListViewController.dataManager.webService as? WebServicesMock)?.isError = true
+        deliveryListViewController.getDeliveryListNextPageData()
+        XCTAssert(deliveryListViewController.deliveryList.count == 0)
+    }
+
+    func testGetNextPageDataWithCoreDataEmpty() {
+        deliveryListViewController.getNextPageData()
+        XCTAssertTrue(deliveryListViewController.deliveryList.count == 0)
+    }
+
+    func testGetDeliveryListWithCoreDataValue() {
+        CoreDataHelper.shared.save(deliveryList: [DeliveryListModel(dictionary: ["id": 0]) ?? DeliveryListModel(dictionary: [:])!])
+        deliveryListViewController.getNextPageData()
+        XCTAssertTrue(deliveryListViewController.deliveryList.count == 1)
+
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+        deliveryListViewController = nil
     }
+
 }

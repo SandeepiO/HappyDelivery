@@ -17,31 +17,22 @@ public class DeliveryListModel {
     public var location: LocationModel?
     
     init?(dictionary: NSDictionary) {
-        
         id = dictionary["id"]as? Int
         description = dictionary["description"]as? String ?? dictionary["desc"]as? String
         imageUrl = dictionary["imageUrl"]as? String
-        
         if let locationDictionary = dictionary["location"]as? NSDictionary {
             location = LocationModel(dictionary: locationDictionary)
         }
-        
     }
     
     // MARK: - For Core Data
-    
     init?(data: NSManagedObject) {
-        
         id = (data as? DeliveryList)?.value(forKeyPath: "id")as? Int
         description = (data as? DeliveryList)?.value(forKeyPath: "desc")as? String
         imageUrl = (data as? DeliveryList)?.value(forKeyPath: "imageUrl")as? String
-        
         if let locationObject = (data as? DeliveryList)?.value(forKeyPath: "location")as? Location {
-            
             location = LocationModel(data: locationObject)
-            
         }
-        
     }
     
 }
@@ -53,21 +44,16 @@ public class LocationModel {
     public var address: String?
     
     init?(dictionary: NSDictionary) {
-        
         lat = dictionary["lat"]as? Double
         lng = dictionary["lng"]as? Double
         address = dictionary["address"]as? String
-        
     }
     
     // MARK: - For Core Data
-    
     init?(data: NSManagedObject) {
-        
         lat = (data as? Location)?.lat
         lng = (data as? Location)?.lng
         address = (data as? Location)?.address
-        
     }
     
 }

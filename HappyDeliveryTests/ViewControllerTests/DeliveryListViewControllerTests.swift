@@ -13,10 +13,12 @@ import OHHTTPStubs
 class DeliveryListViewControllerTests: XCTestCase {
     
     var deliveryListViewController: DeliveryListViewController!
+    var dataManager: DataManagerMock!
     
     override func setUp() {
         deliveryListViewController = DeliveryListViewController()
-        deliveryListViewController.dataManager = DataManagerMock()
+        dataManager = DataManagerMock()
+        deliveryListViewController.dataManager = dataManager
     }
     
     func testTableViewDelegateConformance() {
@@ -31,25 +33,25 @@ class DeliveryListViewControllerTests: XCTestCase {
     }
     
     func testGetDeliveryListFromServerSuccess() {
-        (deliveryListViewController.dataManager.webService as? WebServicesMock)?.isError = false
+        dataManager.isError = false
         deliveryListViewController.getDeliveryListFromServer()
         XCTAssert(deliveryListViewController.deliveryList.count == 1)
     }
 
     func testGetDeliveryListFromServerError() {
-        (deliveryListViewController.dataManager.webService as? WebServicesMock)?.isError = true
+        dataManager.isError = true
         deliveryListViewController.getDeliveryListFromServer()
         XCTAssert(deliveryListViewController.deliveryList.count == 0)
     }
 
     func testGetDeliveryListNexPageDataFromServerSuccess() {
-        (deliveryListViewController.dataManager.webService as? WebServicesMock)?.isError = false
+        dataManager.isError = false
         deliveryListViewController.getDeliveryListNextPageData()
         XCTAssert(deliveryListViewController.deliveryList.count == 1)
     }
 
     func testGetDeliveryListNextPageDataFromServerError() {
-        (deliveryListViewController.dataManager.webService as? WebServicesMock)?.isError = true
+        dataManager.isError = true
         deliveryListViewController.getDeliveryListNextPageData()
         XCTAssert(deliveryListViewController.deliveryList.count == 0)
     }
@@ -69,6 +71,7 @@ class DeliveryListViewControllerTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
         deliveryListViewController = nil
+        dataManager = nil
     }
 
 }

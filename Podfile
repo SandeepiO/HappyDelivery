@@ -11,6 +11,7 @@ pod 'SwiftLint', '0.31.0'
 pod 'Firebase/Analytics', '6.3.0'
 pod 'Fabric', '1.10.2'
 pod 'Crashlytics', '3.13.2'
+pod 'MBProgressHUD', '1.1.0'
 
 end
 

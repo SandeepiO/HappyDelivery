@@ -10,11 +10,12 @@ import Foundation
 @testable import HappyDelivery
 
 class DataManagerMock: DataManager {
-    
+
+    var isError = false
+
     override init() {
         super.init()
         CoreDataHelper.shared.managedContext = CoreDataMock().mockPersistantContainer.viewContext
-        self.webService = WebServicesMock()
     }
 
     override func getDeliveriesListFromCoreData(offset: Int, limit: Int) -> [DeliveryListModel] {
@@ -31,14 +32,13 @@ class DataManagerMock: DataManager {
     }
 
     override func getDeliveryListFromServer(offset: Int, limit: Int, isToPullRefresh: Bool? = false, responseBlock: (([DeliveryListModel]?, Error?) -> Void)?) {
-        let requestModel = generateRequestModel(offset: offset, limit: limit, isToPullRefresh: isToPullRefresh)
-        webService.requestForGetType(url: requestModel.deliveryListUrl(), parameters: requestModel.requestBody as [NSString: NSObject]) { (response, error) in
-            if let error = error {
-                responseBlock?(nil, error)
-            } else {
-                let deliveryLists = ModelConversion.arrayModelFromDictionary(array: response as? NSArray ?? [])
-                responseBlock?(deliveryLists, nil)
-            }
+        if isError {
+            let error = NSError(domain: "Custom Error", code: 500, userInfo: nil)
+            responseBlock?([], error)
+        } else {
+            let location: NSDictionary = ["lat": 28.23, "lng": 78.00, "address": "address"]
+            let deliveryItem: NSDictionary = ["id": 0, "imageUrl": "", "description": "sddsad", "location": location]
+            responseBlock?([DeliveryListModel(dictionary: deliveryItem)!], nil)
         }
     }
 

@@ -33,7 +33,7 @@ class DeliveryDetailViewController: UIViewController {
     }
     
     func setUpUI() {
-        self.title = NavigationTitle().deliveryDetail
+        self.title = Localisation.NavigationTitle.deliveryDetail
         self.view.backgroundColor = .white
         self.descriptionLabel.numberOfLines = kZeroNumberOfLine
         self.bottomView.backgroundColor = .white
@@ -92,7 +92,7 @@ class DeliveryDetailViewController: UIViewController {
         } else {
             self.deliveryItemImageView.image = UIImage()
         }
-        self.descriptionLabel.text = (deliveryListData?.description ?? "") + StringValue.at + (deliveryListData?.location?.address ?? "")
+        self.descriptionLabel.text = (deliveryListData?.description ?? "") + Localisation.StringValue.at + (deliveryListData?.location?.address ?? "")
         let marker = Marker(title: deliveryListData?.location?.address ?? "", coordinate: CLLocationCoordinate2D(latitude: deliveryListData?.location?.lat ?? 0.0, longitude: deliveryListData?.location?.lng ?? 0.0))
         self.mapView.addAnnotation(marker)
         self.centerMapOnLocation(location: marker.coordinate)

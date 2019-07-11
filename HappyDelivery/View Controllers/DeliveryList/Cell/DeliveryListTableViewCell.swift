@@ -34,7 +34,7 @@ class DeliveryListTableViewCell: UITableViewCell {
         } else {
             self.deliveryItemImageView.image = UIImage()
         }
-        self.descriptionLabel.text = (data.description ?? "") + StringValue.at + (data.location?.address ?? "")
+        self.descriptionLabel.text = (data.description ?? "") + Localisation.StringValue.at + (data.location?.address ?? "")
     }
     
     func setUpUI() {

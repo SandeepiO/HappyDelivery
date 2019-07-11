@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class DeliveryListViewController: UIViewController {
     
@@ -35,7 +36,7 @@ class DeliveryListViewController: UIViewController {
     
     func setUpUI() {
         self.automaticallyAdjustsScrollViewInsets = false
-        self.title = NavigationTitle().deliveryList
+        self.title = Localisation.NavigationTitle.deliveryList
         self.view.addSubview(self.tableView)
         self.bottomActivityIndicator.isHidden = true
         self.bottomActivityIndicator.color = .black
@@ -72,13 +73,13 @@ class DeliveryListViewController: UIViewController {
 extension DeliveryListViewController {
 
     func getDeliveryListFromServer() {
-        Indicator.shared.showActivityIndicatory(uiView: self.view)
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         self.getDeliveryList()
     }
     
     func getDeliveryList(isToPullRefresh: Bool? = false) {
         dataManager.getDeliveryListFromServer(offset: self.deliveryList.count, limit: kListLimit, isToPullRefresh: isToPullRefresh, responseBlock: {[weak self] (deliveryList, error) in
-            Indicator.shared.hideAcivityIndicator()
+            MBProgressHUD.hide(for: self?.view ?? UIView(), animated: true)
             if let error = error {
                 self?.errorResponse(isToPullRefresh: isToPullRefresh ?? false, error: error)
             } else {
@@ -103,7 +104,7 @@ extension DeliveryListViewController {
     
     func errorResponse(isToPullRefresh: Bool, error: Error) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {[weak self] in
-            self?.showAlertWithCancelButton(error.localizedDescription, AlertKey.retry, {[weak self] in
+            self?.showAlertWithCancelButton(error.localizedDescription, Localisation.AlertKey.retry, {[weak self] in
                 self?.getDeliveryListFromServer()
                 }, {
                     self?.refreshControl.endRefreshing()
@@ -124,7 +125,7 @@ extension DeliveryListViewController {
     func addLabelView() -> UILabel {
         let noDataLabel = UILabel()
         noDataLabel.numberOfLines = kZeroNumberOfLine
-        noDataLabel.text = StringValue.noResultData
+        noDataLabel.text = Localisation.StringValue.noResultData
         noDataLabel.textAlignment = .center
         return noDataLabel
     }

@@ -15,8 +15,6 @@
 		06F89F8722C48975001618C3 /* DeliveryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F8622C48975001618C3 /* DeliveryListModel.swift */; };
 		06F89F8B22C498D7001618C3 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F8A22C498D7001618C3 /* WebServices.swift */; };
 		06F89F8E22C499C5001618C3 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F8D22C499C5001618C3 /* AppConstant.swift */; };
-		06F89F9122C4A08A001618C3 /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F9022C4A08A001618C3 /* AppExtension.swift */; };
-		06F89F9622C4A794001618C3 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F9522C4A794001618C3 /* Indicator.swift */; };
 		06F89F9A22C4B258001618C3 /* DeliveryListRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F9922C4B258001618C3 /* DeliveryListRequestModel.swift */; };
 		06F89F9C22C4BFDD001618C3 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F9B22C4BFDD001618C3 /* CoreDataHelper.swift */; };
 		06F89FA022C5C2FD001618C3 /* DeliveryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89F9F22C5C2FD001618C3 /* DeliveryDetailViewController.swift */; };
@@ -36,6 +34,9 @@
 		06F89FEC22CE03A0001618C3 /* WebServicesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89FEB22CE03A0001618C3 /* WebServicesMock.swift */; };
 		06F89FEF22CF37EB001618C3 /* DataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F89FEE22CF37EB001618C3 /* DataManagerMock.swift */; };
 		06FE76E922D366D9003B67C5 /* LocalisedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE76E822D366D9003B67C5 /* LocalisedString.swift */; };
+		06FE76EB22D72286003B67C5 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE76EA22D72285003B67C5 /* Extension+UIViewController.swift */; };
+		06FE76ED22D722AD003B67C5 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE76EC22D722AD003B67C5 /* Extension+UIView.swift */; };
+		06FE76EF22D722C9003B67C5 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE76EE22D722C9003B67C5 /* Extension+String.swift */; };
 		74C81C3F187E29478A8574CC /* Pods_HappyDelivery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71385A286234FEECD81936 /* Pods_HappyDelivery.framework */; };
 		83CE69A6AE660832C64B9B0D /* Pods_HappyDeliveryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC9437E35293078707DB9C9 /* Pods_HappyDeliveryTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,9 +65,7 @@
 		06F89F8622C48975001618C3 /* DeliveryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListModel.swift; sourceTree = "<group>"; };
 		06F89F8A22C498D7001618C3 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		06F89F8D22C499C5001618C3 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
-		06F89F9022C4A08A001618C3 /* AppExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
 		06F89F9222C4A583001618C3 /* HappyDelivery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HappyDelivery-Bridging-Header.h"; sourceTree = "<group>"; };
-		06F89F9522C4A794001618C3 /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 		06F89F9922C4B258001618C3 /* DeliveryListRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryListRequestModel.swift; sourceTree = "<group>"; };
 		06F89F9B22C4BFDD001618C3 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		06F89F9F22C5C2FD001618C3 /* DeliveryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +86,9 @@
 		06F89FEB22CE03A0001618C3 /* WebServicesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesMock.swift; sourceTree = "<group>"; };
 		06F89FEE22CF37EB001618C3 /* DataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerMock.swift; sourceTree = "<group>"; };
 		06FE76E822D366D9003B67C5 /* LocalisedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalisedString.swift; sourceTree = "<group>"; };
+		06FE76EA22D72285003B67C5 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		06FE76EC22D722AD003B67C5 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		06FE76EE22D722C9003B67C5 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		09D74AE65D5D92F13D01D47A /* Pods-HappyDelivery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyDelivery.debug.xcconfig"; path = "Target Support Files/Pods-HappyDelivery/Pods-HappyDelivery.debug.xcconfig"; sourceTree = "<group>"; };
 		0FC9437E35293078707DB9C9 /* Pods_HappyDeliveryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyDeliveryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC71385A286234FEECD81936 /* Pods_HappyDelivery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyDelivery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,9 +229,10 @@
 		06F89F8F22C4A070001618C3 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				06F89F9022C4A08A001618C3 /* AppExtension.swift */,
+				06FE76EA22D72285003B67C5 /* Extension+UIViewController.swift */,
+				06FE76EC22D722AD003B67C5 /* Extension+UIView.swift */,
+				06FE76EE22D722C9003B67C5 /* Extension+String.swift */,
 				06F89F9222C4A583001618C3 /* HappyDelivery-Bridging-Header.h */,
-				06F89F9522C4A794001618C3 /* Indicator.swift */,
 				06F89F9B22C4BFDD001618C3 /* CoreDataHelper.swift */,
 				06F89FA122C5DA45001618C3 /* Marker.swift */,
 			);
@@ -581,9 +584,11 @@
 				06F89FCB22CDB0B8001618C3 /* ModelConversion.swift in Sources */,
 				06F89F8122C38E94001618C3 /* DeliveryListTableViewCell.swift in Sources */,
 				06F89F8E22C499C5001618C3 /* AppConstant.swift in Sources */,
-				06F89F9122C4A08A001618C3 /* AppExtension.swift in Sources */,
+				06FE76EB22D72286003B67C5 /* Extension+UIViewController.swift in Sources */,
+				06FE76EF22D722C9003B67C5 /* Extension+String.swift in Sources */,
 				06F89F8B22C498D7001618C3 /* WebServices.swift in Sources */,
 				06F89F9A22C4B258001618C3 /* DeliveryListRequestModel.swift in Sources */,
+				06FE76ED22D722AD003B67C5 /* Extension+UIView.swift in Sources */,
 				06FE76E922D366D9003B67C5 /* LocalisedString.swift in Sources */,
 				06F89FE222CDEAD1001618C3 /* DataManager.swift in Sources */,
 				06F89F5022C3889C001618C3 /* AppDelegate.swift in Sources */,
@@ -591,7 +596,6 @@
 				06F89FA222C5DA45001618C3 /* Marker.swift in Sources */,
 				06F89F5822C3889C001618C3 /* HappyDelivery.xcdatamodeld in Sources */,
 				06F89F9C22C4BFDD001618C3 /* CoreDataHelper.swift in Sources */,
-				06F89F9622C4A794001618C3 /* Indicator.swift in Sources */,
 				06F89F8722C48975001618C3 /* DeliveryListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,9 +16,9 @@ Xcode : 10.2
 - Model: Model represents shape of the data and business logic. It maintains the data of the application. Model objects retrieve and store model state in a database.
 - View: View is a user interface. View display data using model to the user and also enables them to modify the data.
 - Controller: Controller handles the user request. Typically, user interact with View, which in-turn raises appropriate URL request, this request will be handled by a controller. The controller renders the appropriate view with the model data as a response.
--CoreDataHelper: CoreDataHelper is used to save, retrive and delete the data in core data.
--DataManager: DataManager is used to check the data is available on local storage then share it with controller and if not available then request it from Webservices to get the data from server.
--WebServices: WebServices is used to fetch the data from the server using alamofire.
+- CoreDataHelper: CoreDataHelper is used to save, retrive and delete the data in core data.
+- DataManager: DataManager is used to check the data is available on local storage then share it with controller and if not available then request it from Webservices to get the data from server.
+- WebServices: WebServices is used to fetch the data from the server using alamofire.
 
 # Supported OS version
 iOS (10.x, 11.x, 12.x)

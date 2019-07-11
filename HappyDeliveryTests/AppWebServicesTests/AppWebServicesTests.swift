@@ -31,14 +31,9 @@ class AppWebServicesTest: XCTestCase {
             .limit(index: kListLimit)
             .build()
         webService.requestForGetType(url: requestModel.deliveryListUrl(), parameters: requestModel.requestBody as [NSString: NSObject]) { (response, error) in
-            if let error = error {
-                XCTAssertNotNil(error.localizedDescription, "Delivery List not fetched")
-                resultExpectation.fulfill()
-            } else {
-                XCTAssertNotNil(response, "Delivery List fetched")
-                XCTAssertEqual(20, (response as? NSArray)?.count ?? 0)
-                resultExpectation.fulfill()
-            }
+            XCTAssertNotNil(response, "Delivery List fetched")
+            XCTAssertEqual(20, (response as? NSArray)?.count ?? 0)
+            resultExpectation.fulfill()
         }
         waitForExpectations(timeout: 10) { error in
             if let error = error {
@@ -62,13 +57,8 @@ class AppWebServicesTest: XCTestCase {
             .limit(index: kListLimit)
             .build()
         webService.requestForGetType(url: requestModel.deliveryListUrl(), parameters: requestModel.requestBody as [NSString: NSObject]) { (response, error) in
-            if let error = error {
-                XCTAssertNotNil(error.localizedDescription, "Invalid Json")
-                resultExpectation.fulfill()
-            } else {
-                XCTAssertNotNil(response, "Delivery List not fetched")
-                resultExpectation.fulfill()
-            }
+            XCTAssertNotNil(error)
+            resultExpectation.fulfill()
         }
         waitForExpectations(timeout: 10) { error in
             if let error = error {

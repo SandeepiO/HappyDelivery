@@ -102,13 +102,12 @@ extension DeliveryListViewController {
     }
     
     func errorResponse(isToPullRefresh: Bool, error: Error) {
-        DispatchQueue.main.async {[weak self] in
-            self?.refreshControl.endRefreshing()
-            self?.tableView.reloadData()
-        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {[weak self] in
             self?.showAlertWithCancelButton(error.localizedDescription, AlertKey.retry, {[weak self] in
                 self?.getDeliveryListFromServer()
+                }, {
+                    self?.refreshControl.endRefreshing()
+                    self?.tableView.reloadData()
             })
         })
         self.addTableViewBackgroundView()

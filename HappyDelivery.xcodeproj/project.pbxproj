@@ -140,6 +140,7 @@
 			children = (
 				06F89FC822CCE27E001618C3 /* App Config */,
 				06F89F8822C498AD001618C3 /* View Controllers */,
+				06F89FE022CDEAC0001618C3 /* DataManager */,
 				06F89F8922C498BD001618C3 /* WebServices */,
 				06F89F8C22C499B7001618C3 /* App Constant */,
 				06F89FA922C9D599001618C3 /* Resources */,
@@ -164,7 +165,6 @@
 		06F89F8222C4889C001618C3 /* DeliveryList */ = {
 			isa = PBXGroup;
 			children = (
-				06F89FE022CDEAC0001618C3 /* DataManager */,
 				06F89F8522C48953001618C3 /* Model */,
 				06F89F8422C48911001618C3 /* Cell */,
 				06F89F8322C488F4001618C3 /* View Controller */,

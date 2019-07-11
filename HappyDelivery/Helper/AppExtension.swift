@@ -19,7 +19,7 @@ extension UIViewController {
         UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
     }
     
-    func showAlertWithCancelButton(_ message: String, _ okButtonTitle: String, _ completion: (() -> Void)?) {
+    func showAlertWithCancelButton(_ message: String, _ okButtonTitle: String, _ completion: (() -> Void)?, _ alertShown: (() -> Void)?) {
         let alert = UIAlertController(title: AlertTile().appTitle, message: message, preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: okButtonTitle, style: .default) { (action) in
             completion?()
@@ -27,7 +27,9 @@ extension UIViewController {
         let cancelAction = UIAlertAction(title: AlertKey.cancel, style: UIAlertAction.Style.default, handler: nil)
         alert.addAction(okAction)
         alert.addAction(cancelAction)
-        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true) {
+            alertShown?()
+        }
     }
     
 }

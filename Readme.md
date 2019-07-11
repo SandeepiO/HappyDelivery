@@ -16,15 +16,18 @@ Xcode : 10.2
 - Model: Model represents shape of the data and business logic. It maintains the data of the application. Model objects retrieve and store model state in a database.
 - View: View is a user interface. View display data using model to the user and also enables them to modify the data.
 - Controller: Controller handles the user request. Typically, user interact with View, which in-turn raises appropriate URL request, this request will be handled by a controller. The controller renders the appropriate view with the model data as a response.
+-CoreDataHelper: CoreDataHelper is used to save, retrive and delete the data in core data.
+-DataManager: DataManager is used to check the data is available on local storage then share it with controller and if not available then request it from Webservices to get the data from server.
+-WebServices: WebServices is used to fetch the data from the server using alamofire.
 
 # Supported OS version
-iOS (10.x, 11.x, 12.x)  
+iOS (10.x, 11.x, 12.x)
 
 # Language 
 Swift 5.0
 
 # Version
-1.0 
+1.0
 
 # Pod Used      
 - Alamofire
@@ -44,9 +47,10 @@ Swift 5.0
 -   Data caching is available, but complete data syncing is not supported right now (for ex deletion of items) , however duplicate items are being checked on the basis of "id".
 
 # Features
-- Crash Reporting
-- Map Annotation
-- Lisitng Animation
+- Showing the list of delivery data, and on click on it shows the detail of delivery data with map.
+- Used core data to store the data on local storage.
+- Used pull to refresh to fetch new data from server and if data is not available or internet connectivity is unavailable then show the previous stored data, if data is fetched then remove the previous store data from model and core data and populate the new list.
+- Pagination is used to fetch the new page data from server and if data is available then store the new data in model and core data, populate the list with new data. If data is not availble then keep the list as it is.
 
 # SwiftLint
 - Integration of SwiftLint into an Xcode scheme to keep a codebase consistent and maintainable .
@@ -57,14 +61,9 @@ Swift 5.0
 # Map
 - Apple map is used.
 
-# External Library
-- ICSPullToRefresh
-(Pod version was not compatible with swift 5 version so added in external folder.)
-
 # Data Caching
-- CoreData is used for data caching. Every time items fetched from server will save into database as well. Data insertion is done based on "id", new item will be inserted only for a new "id" . If item have same "id" than it will be updated.
-- Images are getting saved in document directory.
-- "Pull to refresh" will fetch data from starting index, and it will clear all previous data stored in local database.
+- CoreData is used for data caching. Every time items fetched from server will save into database as well. Data insertion is done based on "id", new item will be inserted only for a new "id" . If item have same "id" than it will not perform any action.
+- "Pull to refresh" will fetch data from starting index, and it will clear all previous data stored in local database, and if internet is not available then show the pop up alert and keep the previous data.
 
 # Firebase CrashAnalytics
 -  We need to create account on firebase. Kindly replace "GoogleService-Info.plist" file with your plist file which will be geretated while creating an app on firebase.
